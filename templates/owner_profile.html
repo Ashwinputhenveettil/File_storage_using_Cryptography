@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Owner Login</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='layout/styles/layout.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
   <style>
@@ -87,9 +86,9 @@
   <nav>
     <ul>
       <li><a href="/">Home</a></li>
-      <li class="active"><a href="/owner">Owner</a></li>
-      <li><a href="/user">User</a></li>
-      <li><a href="/home1.html">Assistant</a></li>
+      <li class="active"><a href="/owner_profile">Owner</a></li>
+      <li><a href="/user_profile">User</a></li>
+      <li><a href="/dashboard">Assistant</a></li>
       <li><a href="https://web3-fundraiser-youtube.vercel.app/createcampaign" target="_blank">Our Projects</a></li>
     </ul>
   </nav>
@@ -107,7 +106,7 @@
       <input type="reset" value="Reset">
     </form>
     <div class="register">
-      <p>New User? <a href="/ownerreg">Click here to register</a></p>
+      <p>New User? <a href="/owner_register">Click here to register</a></p>
     </div>
   </main>
 

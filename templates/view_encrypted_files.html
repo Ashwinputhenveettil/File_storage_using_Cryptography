@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Owner - View Files</title>
+  <title>View Split Data</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
       margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
     }
     header, nav, footer {
       background-color: #1d3557;
@@ -19,23 +18,22 @@
       text-align: center;
     }
     nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
       display: flex;
       justify-content: center;
+      list-style: none;
+      padding: 0;
       gap: 1.5rem;
     }
     nav ul li a {
       color: white;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
     }
     main {
       max-width: 1000px;
       margin: 2rem auto;
       padding: 2rem;
-      background-color: #fff;
+      background-color: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     table {
@@ -45,25 +43,17 @@
     }
     th, td {
       padding: 0.75rem;
-      text-align: center;
       border: 1px solid #ddd;
+      text-align: center;
     }
     th {
       background-color: #f0f0f0;
     }
-    a.button {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background-color: #007bff;
-      color: white;
-      border-radius: 4px;
-      text-decoration: none;
-    }
     .info-box {
-      background-color: #e2e6ea;
-      padding: 1rem;
-      border-left: 4px solid #007bff;
       margin-top: 2rem;
+      padding: 1rem;
+      background-color: #e9ecef;
+      border-left: 4px solid #17a2b8;
     }
   </style>
 </head>
@@ -71,53 +61,45 @@
   <header>
     <h1>Secure File Storage on Cloud Using Hybrid Cryptography</h1>
   </header>
-
   <nav>
     <ul>
       <li><a href="/owner_dashboard">Home</a></li>
       <li><a href="/upload_file">File Upload</a></li>
-      <li class="active"><a href="/owner_view_files">View Files</a></li>
-      <li><a href="/view_encrypted_files">View Split Data</a></li>
+      <li><a href="/owner_view_files">View Files</a></li>
+      <li class="active"><a href="/view_encrypted_files">View Split Data</a></li>
       <li><a href="/view_user_requests">View Request</a></li>
       <li><a href="/logout_success">Logout</a></li>
     </ul>
   </nav>
-
   <main>
-    <h2>Uploaded Files</h2>
-    {% if showdata %}
+    <h2>Encrypted File Parts</h2>
+    {% if spliinfo %}
     <table>
       <thead>
         <tr>
-          <th>ID</th>
           <th>File Name</th>
-          <th>File Content</th>
-          <th>Date</th>
-          <th>Owner</th>
-          <th>Action</th>
+          <th>Part 1 (DES)</th>
+          <th>Part 2 (AES)</th>
+          <th>Part 3 (RSA)</th>
         </tr>
       </thead>
       <tbody>
-        {% for filename, data, CDate, owner in showdata %}
+        {% for filename, f1, f2, f3 in spliinfo %}
         <tr>
-          <td>{{ rowid }}</td>
           <td>{{ filename }}</td>
-          <td>{{ data }}</td>
-          <td>{{ CDate }}</td>
-          <td>{{ owner }}</td>
-          <td><a class="button" href="/split?fname={{filename}}&data={{data}}&owner={{owner}}">Split</a></td>
+          <td>{{ f1 }}</td>
+          <td>{{ f2 }}</td>
+          <td>{{ f3 }}</td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
     {% endif %}
-
     <div class="info-box">
-      <h3>File Splitting Instructions</h3>
-      <p>To split an uploaded file for secure storage, click the <strong>Split</strong> button under the Action column. Splitting your file ensures that even if intercepted, the parts cannot be understood or reconstructed without the correct cryptographic key and sequence.</p>
+      <h3>About Splitting</h3>
+      <p>To enhance security, each file is split into three parts. DES handles Part 1, AES secures Part 2, and RSA protects Part 3. This layered approach prevents complete data compromise if any one part is intercepted.</p>
     </div>
   </main>
-
   <footer>
     <p>&copy; 2024 Secure File Storage in Cloud Computing using Hybrid Cryptography Algorithm | All Rights Reserved</p>
   </footer>
