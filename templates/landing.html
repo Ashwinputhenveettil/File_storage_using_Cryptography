@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Secure Cloud Storage</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='layout/styles/layout.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+    }
+    header, nav, footer {
+      background-color: #1d3557;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      gap: 2rem;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .featured-img {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .featured-img img {
+      max-width: 100%;
+      height: auto;
+    }
+    .columns {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .columns > div {
+      flex: 1;
+      min-width: 300px;
+    }
+    footer .social-icons a {
+      margin: 0 0.5rem;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Secure File Storage on Cloud Using Hybrid Cryptography</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/owner">Owner</a></li>
+      <li><a href="/user">User</a></li>
+      <li><a href="/home1.html">Assistant</a></li>
+      <li><a href="https://web3-fundraiser-youtube.vercel.app/createcampaign" target="_blank">Our Projects</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="featured-img">
+      <img src="{{ url_for('static', filename='img/architecture.jpeg') }}" alt="Architecture">
+    </div>
+
+    <div class="columns">
+      <div>
+        <h2>About This</h2>
+        <p>Our platform provides secure file storage using hybrid cryptography, combining symmetric and asymmetric encryption methods for enhanced safety.</p>
+        <p>With robust key management and encryption standards, we ensure top-level security for your cloud-based data.</p>
+        <p>Our service aligns with industry best practices for encrypted file handling and transfer.</p>
+      </div>
+      <div>
+        <h2>Know More..!</h2>
+        <div style="display: flex; align-items: center;">
+          <img src="{{ url_for('static', filename='img/cloud.jpg') }}" alt="Cloud Lock" style="width: 80px; height: 80px; margin-right: 1rem;">
+          <p>The only way to maintain data confidentiality is to ensure encryption keys remain private and ciphertext is secure from unauthorized access.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="#" class="fab fa-facebook"></a>
+      <a href="#" class="fab fa-twitter"></a>
+      <a href="#" class="fab fa-google"></a>
+      <a href="#" class="fab fa-linkedin"></a>
+      <a href="#" class="fab fa-youtube"></a>
+      <a href="#" class="fab fa-instagram"></a>
+      <a href="#" class="fab fa-pinterest"></a>
+      <a href="#" class="fab fa-snapchat"></a>
+      <a href="#" class="fab fa-skype"></a>
+      <a href="#" class="fab fa-reddit"></a>
+      <a href="#" class="fas fa-rss"></a>
+    </div>
+    <p>&copy; 2024 Secure File Storage in Cloud Computing using Hybrid Cryptography Algorithm | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
