@@ -16,3 +16,47 @@ This project is a secure web-based platform that allows users to **store, encryp
 - Built with Flask + MySQL + HTML/CSS
 
 
+---
+
+##  Tech Stack
+
+- **Frontend**: HTML5, CSS3, Font Awesome
+- **Backend**: Python (Flask)
+- **Database**: MySQL (with PyMySQL connector)
+- **Cryptography**: PyCrypto / Cryptography module (AES + RSA)
+- **Chatbot**: JavaScript-based Assistant Interface
+
+---
+
+## Installation
+
+1. **Clone the Repository**
+
+    bash
+    `git clone https://github.com/Ashwinputhenveettil/File_storage_using_Cryptography.git`
+    <br>`cd File_storage_using_Cryptography`
+
+2. **Create Virtual Environment**
+
+      `python -m venv venv` <br>
+      `source venv/bin/activate`  # On Windows: venv\Scripts\activate
+
+3. **Install Dependencies** <br>
+      `pip install -r requirements.txt`
+
+4. **Set Up MySQL Database** <br>
+    Create a database (e.g., securecloud) <br>
+    Update DB credentials in database.py  <br>
+    conn = pymysql.connect(host="localhost", user="root", password="", database="securecloud")
+
+5. **Run the App**
+   python app.py <br>
+   Then open http://localhost:5000 in your browser.
+
+
+
+
+
+
+
+
