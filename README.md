@@ -42,14 +42,17 @@ This project is a secure web-based platform that allows users to **store, encryp
       `source venv/bin/activate`  # On Windows: venv\Scripts\activate
 
 3. **Install Dependencies** <br>
+
       `pip install -r requirements.txt`
 
 4. **Set Up MySQL Database** <br>
+
     Create a database (e.g., securecloud) <br>
     Update DB credentials in database.py  <br>
     conn = pymysql.connect(host="localhost", user="root", password="", database="securecloud")
 
 5. **Run the App**
+   
    python app.py <br>
    Then open http://localhost:5000 in your browser.
 
