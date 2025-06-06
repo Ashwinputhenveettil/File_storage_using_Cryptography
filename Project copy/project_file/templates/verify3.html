@@ -1,0 +1,17 @@
+<!-- verify3.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verify RSA Key</title>
+</head>
+<body>
+  <h2>Step 3: Verify RSA Key</h2>
+  <form method="post" action="/verify3">
+    <input type="hidden" name="filename" value="{{ filename }}">
+    <label for="dkey">Enter RSA Key:</label>
+    <input type="text" name="dkey" required>
+    <button type="submit">Verify & Download</button>
+  </form>
+</body>
+</html>

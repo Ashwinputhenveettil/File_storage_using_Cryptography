@@ -1,0 +1,19 @@
+{% 
+    email = session.get('email')
+    filename = request.args.get('filename')
+    data = request.args.get('data')
+    owner = request.args.get('owner')
+    try:
+      con = Dbconnection.getConnection()
+      st = con.createStatement()
+      query = f"INSERT INTO request(filename, data, owner, status, email) VALUES ('{filename}', '{data}', '{owner}', 'No', '{email}')"
+      j = st.executeUpdate(query)
+      if j != 0:
+        response.sendRedirect("/vf?msg=Request_sent_to_CloudB")
+      else:
+        response.sendRedirect("/vf?m1=Request_failed")
+    except Exception as ex:
+      response.sendRedirect("/vf?msgb=You_have_already_given_request")
+      ex.printStackTrace()
+  %}
+  

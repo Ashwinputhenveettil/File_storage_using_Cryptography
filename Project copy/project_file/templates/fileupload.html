@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='layout/styles/layout.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    header, nav, footer {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      background-color: white;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-bottom: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input[type="text"], input[type="file"], input[type="submit"], input[type="reset"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    input[type="submit"] {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #218838;
+    }
+    input[type="reset"] {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="reset"]:hover {
+      background-color: #c82333;
+    }
+    section.instructions {
+      margin-top: 2rem;
+      background-color: #e2e3e5;
+      padding: 1rem;
+      border-left: 4px solid #17a2b8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Secure File Storage on Cloud Using Hybrid Cryptography</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="/ownerhome">Home</a></li>
+      <li class="active"><a href="/fileupload">File Upload</a></li>
+      <li><a href="/ownerviewfiles">View Files</a></li>
+      <li><a href="/pycache">View Split Data</a></li>
+      <li><a href="/vuserreq">View Request</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Upload a File</h2>
+    <form name="f2" action="Upload" method="post" enctype="multipart/form-data">
+      <label for="fname">Name</label>
+      <input type="text" id="fname" name="fname" placeholder="Please enter the file name." required>
+
+      <label for="inputfile">Choose File</label>
+      <input type="file" id="inputfile" name="inputfile" required>
+
+      <div style="display: flex; gap: 1rem;">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+
+    <section class="instructions">
+      <h3>File Upload Instructions</h3>
+      <p>To upload a file, enter the desired file name. Then click the 'Choose File' button to browse and select a file from your local system. Once selected, click 'Submit' to upload it securely to the cloud.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Secure File Storage in Cloud Computing using Hybrid Cryptography Algorithm | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

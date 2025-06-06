@@ -1,0 +1,17 @@
+<!-- verify2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verify AES Key</title>
+</head>
+<body>
+  <h2>Step 2: Verify AES Key</h2>
+  <form method="post" action="/verify2">
+    <input type="hidden" name="filename" value="{{ filename }}">
+    <label for="dkey">Enter AES Key:</label>
+    <input type="text" name="dkey" required>
+    <button type="submit">Verify</button>
+  </form>
+</body>
+</html>

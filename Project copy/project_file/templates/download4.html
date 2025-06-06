@@ -1,0 +1,31 @@
+{% 
+  filename = request.args.get('filename')
+  owner = request.args.get('owner')
+  try:
+    con = Dbconnection.getConnection()
+    q = "SELECT * FROM cloudadata WHERE owner='" + owner + "' AND filename='" + filename + "'"
+    st = con.createStatement()
+    rs1 = st.executeQuery(q)
+    if rs1.next():
+      skey1 = rs1.getString("skey")
+      skey2 = rs1.getString("skey1")
+      skey3 = rs1.getString("skey2")
+      p1 = rs1.getString("f1")
+      p2 = rs1.getString("f2")
+      p3 = rs1.getString("f3")
+      data = rs1.getString("data")
+
+      first = new decryption().decrypt(p1, skey1)
+      second2 = new decryption().decrypt(p3, skey3)
+      des = new DESEncryption().dec(p2, skey2)
+
+      fina = first + des + second2
+      p = first + second2 + des
+
+      response.setHeader("Content-Disposition", "attachment;filename=\"" + filename + "\"")
+      out.write(p)
+    else:
+      response.sendRedirect("download.jsp?dmsg=keys are not matched")
+  except Exception as ex:
+    ex.printStackTrace()
+%}

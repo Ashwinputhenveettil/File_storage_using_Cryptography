@@ -1,0 +1,17 @@
+<!-- verify1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verify DES Key</title>
+</head>
+<body>
+  <h2>Step 1: Verify DES Key</h2>
+  <form method="post" action="/verify1">
+    <input type="hidden" name="filename" value="{{ filename }}">
+    <label for="dkey">Enter DES Key:</label>
+    <input type="text" name="dkey" required>
+    <button type="submit">Verify</button>
+  </form>
+</body>
+</html>

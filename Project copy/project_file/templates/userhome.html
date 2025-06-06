@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='layout/styles/layout.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+    }
+    header, nav, footer {
+      background-color: #1d3557;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .banner {
+      background-image: url('{{ url_for('static', filename='img/Designer.jpeg') }}');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .banner h2 {
+      margin-bottom: 1rem;
+    }
+    .banner p {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .columns > div {
+      flex: 1;
+      min-width: 300px;
+    }
+    footer .social-icons {
+      margin: 1rem 0;
+    }
+    footer .social-icons a {
+      margin: 0 0.5rem;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Secure File Storage on Cloud Using Hybrid Cryptography</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li class="active"><a href="/userhome">Home</a></li>
+      <li><a href="/vf">View Files</a></li>
+      <li><a href="/download">Verify</a></li>
+      <li><a href="/home1.html">Assistant</a></li>
+      <li><a href="/user">Logout</a></li>
+    </ul>
+  </nav>
+
+  <section class="banner">
+    <h2>User Portal</h2>
+    <p>Welcome to your secure file vault. All your uploaded and authorized files are protected using hybrid cryptographic techniques that ensure confidentiality and trust.</p>
+  </section>
+
+  <main>
+    <div class="columns">
+      <div>
+        <h3>About Our Platform</h3>
+        <p>We use a combination of symmetric and asymmetric encryption algorithms to guarantee that your data remains private, even in transit. Only verified users have access to file requests and downloads.</p>
+        <p>All activities are monitored and designed for compliance with modern security standards.</p>
+      </div>
+      <div>
+        <h3>FAQs</h3>
+        <p><strong>Need help?</strong><br>Reach us anytime at <strong>ashwinputhenveettil@gmail.com</strong>. We’re here to support your secure storage journey.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/asvpreddy" class="fab fa-instagram" target="_blank"></a>
+      <a href="https://x.com/Securefile9521" class="fab fa-twitter" target="_blank"></a>
+      <a href="https://www.linkedin.com/mwlite/profile/me" class="fab fa-linkedin" target="_blank"></a>
+      <a href="https://youtube.com/@Securefilestorageusinghybridcr" class="fab fa-youtube" target="_blank"></a>
+      <a href="https://in.pinterest.com/" class="fab fa-pinterest" target="_blank"></a>
+      <a href="https://accounts.snapchat.com/accounts/v2/login" class="fab fa-snapchat-ghost" target="_blank"></a>
+      <a href="https://www.skype.com/en/" class="fab fa-skype" target="_blank"></a>
+      <a href="https://www.reddit.com" class="fab fa-reddit" target="_blank"></a>
+      <a href="https://rss.app/" class="fas fa-rss" target="_blank"></a>
+    </div>
+    <p>&copy; 2024 Secure File Storage in Cloud Computing using Hybrid Cryptography Algorithm | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
