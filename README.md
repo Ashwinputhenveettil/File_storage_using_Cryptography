@@ -1,4 +1,4 @@
-# File_storage_using_Cryptography
+# File_Storage_using_Cryptography
 
 This project is a secure web-based platform that allows users to **store, encrypt, and retrieve files** using **hybrid cryptography** — combining both symmetric (AES) and asymmetric (RSA) encryption. The application ensures privacy and access control, and features an intelligent assistant for interaction.
 
@@ -55,6 +55,14 @@ This project is a secure web-based platform that allows users to **store, encryp
    
    python app.py <br>
    Then open http://localhost:5000 in your browser.
+
+##  Contributors
+
+| Name | GitHub |
+|------|--------|
+| A Sai Vara Prasad | [@AVSPGitHub](https://github.com/ASVPREDDY) | 
+| N Paul Prasanna Kumar | [@PaulGitHub](https://github.com/Paul9441) |
+| Puthenveettil Prasannan Ashwin | [@AshwinGitHub](https://github.com/yourusername) |
 
 
 
