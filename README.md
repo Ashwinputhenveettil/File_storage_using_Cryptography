@@ -60,7 +60,7 @@ This project is a secure web-based platform that allows users to **store, encryp
 
 | Name | GitHub |
 |------|--------|
-| A Sai Vara Prasad | [@AVSPGitHub](https://github.com/ASVPREDDY) | 
+| A Sai Vara Prasad Reddy | [@AVSPGitHub](https://github.com/ASVPREDDY) | 
 | N Paul Prasanna Kumar | [@PaulGitHub](https://github.com/Paul9441) |
 | Puthenveettil Prasannan Ashwin | [@AshwinGitHub](https://github.com/yourusername) |
 
