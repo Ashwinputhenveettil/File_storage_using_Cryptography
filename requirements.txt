@@ -1,0 +1,7 @@
+PyMySQL
+cryptography
+flask
+pycryptodome
+opencv-python
+stegano
+werkzeug
