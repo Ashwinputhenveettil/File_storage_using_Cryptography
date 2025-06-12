@@ -16,9 +16,14 @@ from stegano import lsb
 from RSA import encrypt,decrypt,generate
 import re
 from sendmail import sendmail
+from flask import send_file
+
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
+
+os.makedirs("Project/input", exist_ok=True)
+
 
 @app.route("/")
 def FUN_root():
@@ -264,8 +269,8 @@ def owner_response():
             with open(jointkey_path, 'r') as f:
                 print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
                 print(stringkeys)
-                msg = lsb.hide("Project/input/bt.jpg", str(stringkeys))
-                msg.save("Project/input/bt_sec.png")
+                msg = lsb.hide("input/bt.jpg", str(stringkeys))
+                msg.save("input/bt_sec.png")
 
             return redirect(url_for('owner_vuserreq'))
         else:
@@ -301,7 +306,7 @@ def user_verfiy3():
             fdata = user_lastdownload(filename, owner)
             if fdata:
                 for skey, skey1, skey2, f1, f2, f3 in fdata:
-                    clear_msg = lsb.reveal("Project/input/bt_sec.png")
+                    clear_msg = lsb.reveal("input/bt_sec.png")
                     print(clear_msg)
                     left = 'fi'
                     right = 'se'
@@ -335,8 +340,10 @@ def user_verfiy3():
                     print('totaldata: %s' % totaldata)
 
                     file1 = open("Project/input/myfile.txt", "w")
-                    file1.write(totaldata)
-                    return render_template("download.html", m2="download successful")
+                    with open("Project/input/myfile.txt", "w") as file1:
+                        file1.write(totaldata)
+                    return send_file("Project/input/myfile.txt", as_attachment=True)
+
     else:
         return render_template("download.html", m2="download failed")
 
