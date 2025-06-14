@@ -20,9 +20,9 @@ This project is a secure web-based platform that allows users to **store, encryp
 
 ##  Tech Stack
 
-- **Frontend**: HTML5, CSS3, Font Awesome
+- **Frontend**: HTML, CSS, Font Awesome
 - **Backend**: Python (Flask)
-- **Database**: MySQL (with PyMySQL connector)
+- **Database**: SQLite (with PyMySQL connector)
 - **Cryptography**: PyCrypto / Cryptography module (AES + RSA)
 - **Chatbot**: JavaScript-based Assistant Interface
 
