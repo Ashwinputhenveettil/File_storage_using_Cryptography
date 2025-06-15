@@ -1,4 +1,4 @@
-# File_Storage_using_Cryptography
+# File Storage using Cryptography
 
 This project is a secure web-based platform that allows users to **store, encrypt, and retrieve files** using **hybrid cryptography** — combining both symmetric (AES) and asymmetric (RSA) encryption. The application ensures privacy and access control, and features an intelligent assistant for interaction.
 
